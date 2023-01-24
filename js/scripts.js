@@ -14,6 +14,11 @@ window.onload = function() {
     const age = parseInt(document.querySelector("input#age").value);
     const height = parseInt(document.querySelector("input#height").value);
 
+    if (age <= 5) {
+        document.getElementById("sorry").removeAttribute("class");
+        window.stop();
+    }
+    
     if (age >= 12 && height >= 60) {
       document.getElementById("swings").removeAttribute("class");
       document.getElementById("coaster").removeAttribute("class");
